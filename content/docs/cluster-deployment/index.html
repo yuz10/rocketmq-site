@@ -57,7 +57,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2021-08-09T15:32:06+08:00">
+  <meta property="article:published_time" content="2021-08-11T17:46:15+08:00">
 
 
 
@@ -524,8 +524,8 @@
 <h1 id="deployment-example">Deployment Example</h1>
 
 <p>For example, We want to have a cluster with 2 name servers, 2 broker sets with general purpose:
-for this example, we choose <code class="highlighter-rouge">2m-2s-sync</code>
-Assuming binary RocketMQ is at <code class="highlighter-rouge">/home/rocketmq/dist</code></p>
+for this example, we choose <code class="language-plaintext highlighter-rouge">2m-2s-sync</code>
+Assuming binary RocketMQ is at <code class="language-plaintext highlighter-rouge">/home/rocketmq/dist</code></p>
 
 <ol>
   <li>
@@ -534,22 +534,22 @@ Assuming binary RocketMQ is at <code class="highlighter-rouge">/home/rocketmq/di
   <li>
     <p>Start brokers</p>
 
-    <p><code class="highlighter-rouge">cd /home/rocketmq/dist/bin</code></p>
+    <p><code class="language-plaintext highlighter-rouge">cd /home/rocketmq/dist/bin</code></p>
 
-    <p><code class="highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-a.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
+    <p><code class="language-plaintext highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-a.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
 
-    <p><code class="highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-a-s.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
+    <p><code class="language-plaintext highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-a-s.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
 
-    <p><code class="highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-b.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
+    <p><code class="language-plaintext highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-b.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
 
-    <p><code class="highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-b-s.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
+    <p><code class="language-plaintext highlighter-rouge">bash mqbroker -c ../conf/2m-2s-sync/broker-b-s.properties -n 192.168.0.2:9876,192.168.0.3:9876</code></p>
   </li>
   <li>
     <p>Verify</p>
 
     <p>Execute the following command to verify</p>
 
-    <p><code class="highlighter-rouge">bash mqadmin clusterList</code></p>
+    <p><code class="language-plaintext highlighter-rouge">bash mqadmin clusterList</code></p>
   </li>
 </ol>
 
