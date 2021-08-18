@@ -32,12 +32,10 @@ jobs:
           cd $GITHUB_WORKSPACE/asf-site/
           git rm -rf .
           cp -Rf $GITHUB_WORKSPACE/rocketmq-site/. .
-          ls
           git config --global user.email "action@github.com"
           git config --global user.name "github-action"
           sed -i "/content/d" .gitignore
           sed -i "/vendor/d" .gitignore
           git add .
-          git status
           git commit -m "Latest site on successful build auto-pushed to asf-site"
           git push
