@@ -11,19 +11,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: rocketmq-site
-          
+      
       - uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
         with:
           bundler-cache: true
           ruby-version: 2.7.3
             
       - run: |
-          cd $GITHUB_WORKSPACE/rocketmq-site/
-          bundle install
           bundle exec jekyll build
           rm .git/ -rf
+          mkdir rocketmq-site
+          ls -a |grep -v '^rocketmq-site$\|^\.$\|^\.\.$' | xargs -I {}  mv {} rocketmq-site
 
       - uses: actions/checkout@v2
         with:
