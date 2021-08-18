@@ -23,7 +23,6 @@ jobs:
             
       - run: |
           cd $GITHUB_WORKSPACE/rocketmq-site/
-          bundle install
           bundle exec jekyll build
           rm .git/ -rf
 
