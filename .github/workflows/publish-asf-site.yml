@@ -21,7 +21,7 @@ jobs:
           bundle exec jekyll build
           rm .git/ -rf
           mkdir rocketmq-site
-          ls |grep -v rocketmq-site| xargs -I {}  mv {} rocketmq-site
+          ls -a |grep -v '^rocketmq-site$\|^\.$\|^\.\.$' | xargs -I {}  mv {} rocketmq-site
 
       - uses: actions/checkout@v2
         with:
